@@ -16,15 +16,15 @@
   <meta name="author" content="Joanna">
   <meta name="keywords" content="">
   
-    <meta name="description" content="明明传输了数据但是后端收不到今天在调试前后端能不能通的时候发现前端在进行post请求时明明传输了data，但是在后端接收的时候，一直是空的。 前端使用**axios** 1axios.post(&amp;#x27;http:&#x2F;&#x2F;localhost:3500&#x2F;user&#x2F;register&amp;#x27;, values)  后端使用**express** 12345678router.post(&amp;#x27;&#x2F;re">
+    <meta name="description" content="明明传输了数据但是后端收不到今天在调试前后端能不能通的时候发现前端在进行post请求时明明传输了data，但是在后端接收的时候，一直是空的。 前端使用axios 1axios.post(&amp;#x27;http:&#x2F;&#x2F;localhost:3500&#x2F;user&#x2F;register&amp;#x27;, values)  后端使用express 12345678router.post(&amp;#x27;&#x2F;register&amp;#">
 <meta property="og:type" content="article">
 <meta property="og:title" content="bug_record">
 <meta property="og:url" content="http://example.com/2023/11/22/bug-record/index.html">
 <meta property="og:site_name" content="Joanna&#39;s Blog">
-<meta property="og:description" content="明明传输了数据但是后端收不到今天在调试前后端能不能通的时候发现前端在进行post请求时明明传输了data，但是在后端接收的时候，一直是空的。 前端使用**axios** 1axios.post(&amp;#x27;http:&#x2F;&#x2F;localhost:3500&#x2F;user&#x2F;register&amp;#x27;, values)  后端使用**express** 12345678router.post(&amp;#x27;&#x2F;re">
+<meta property="og:description" content="明明传输了数据但是后端收不到今天在调试前后端能不能通的时候发现前端在进行post请求时明明传输了data，但是在后端接收的时候，一直是空的。 前端使用axios 1axios.post(&amp;#x27;http:&#x2F;&#x2F;localhost:3500&#x2F;user&#x2F;register&amp;#x27;, values)  后端使用express 12345678router.post(&amp;#x27;&#x2F;register&amp;#">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-11-22T09:32:13.000Z">
-<meta property="article:modified_time" content="2023-11-22T09:42:20.083Z">
+<meta property="article:modified_time" content="2023-11-22T09:47:49.458Z">
 <meta property="article:author" content="Joanna">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          901 字
+          893 字
         
       </span>
     
@@ -273,10 +273,10 @@
               <div class="markdown-body">
                 
                 <h1 id="明明传输了数据但是后端收不到"><a href="#明明传输了数据但是后端收不到" class="headerlink" title="明明传输了数据但是后端收不到"></a>明明传输了数据但是后端收不到</h1><p>今天在调试前后端能不能通的时候发现前端在进行post请求时明明传输了data，但是在后端接收的时候，一直是空的。</p>
-<p>前端使用**<code>axios</code>**</p>
+<p>前端使用<code>axios</code></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">axios.<span class="hljs-title function_">post</span>(<span class="hljs-string">&#x27;http://localhost:3500/user/register&#x27;</span>, values)<br></code></pre></td></tr></table></figure>
 
-<p>后端使用**<code>express</code>**</p>
+<p>后端使用<code>express</code></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs javascript">router.<span class="hljs-title function_">post</span>(<span class="hljs-string">&#x27;/register&#x27;</span>, <span class="hljs-keyword">async</span> (req, res, next) =&gt; &#123;<br>    <span class="hljs-keyword">try</span> &#123;<br>        <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(req.<span class="hljs-property">body</span>)<br>        res.<span class="hljs-title function_">send</span>(req.<span class="hljs-property">body</span>)<br>    &#125; <span class="hljs-keyword">catch</span> (e) &#123;<br><br>    &#125;<br>&#125;)<br></code></pre></td></tr></table></figure>
 
 <p><code>req.body</code>一直都是空</p>
